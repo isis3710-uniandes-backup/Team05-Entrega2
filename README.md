@@ -4,19 +4,15 @@
 ### Deployment
 
 ```ssh
-
 $ git clone repo
 $ nano repo/server/.env
-
 ``` 
 
-MLAB=mongodb://grupo5:mlab123@ds129811.mlab.com:29811/01000110
+> MLAB=mongodb://grupo5:mlab123@ds129811.mlab.com:29811/01000110
 
 ```ssh
-
 $ cd repo/
 $ npm start
-
 ``` 
 
 <hr/>
