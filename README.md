@@ -8,7 +8,7 @@
 $ git clone repo
 $ nano repo/server/.env
 
-´´´ 
+``` 
 
 MLAB=mongodb://<dbuser>:<dbpassword>@ds129811.mlab.com:29811/01000110
 
@@ -17,7 +17,7 @@ MLAB=mongodb://<dbuser>:<dbpassword>@ds129811.mlab.com:29811/01000110
 $ cd repo/
 $ npm start
 
-´´´
+``` 
 
 <hr/>
 
