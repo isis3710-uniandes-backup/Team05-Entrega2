@@ -20,6 +20,31 @@ $ npm start
 <hr/>
 
 
+
+### Deployment - Server
+
+
+```ssh
+$ cd server/
+$ npm start
+``` 
+
+
+<hr/>
+
+
+### Deployment - Client
+
+
+```ssh
+$ cd client/
+$ npm start
+``` 
+
+
+<hr/>
+
+
 ### File directory
 
 ```ssh
