@@ -2,7 +2,7 @@
 
 https://printear.herokuapp.com
 
-[NodeJS](https://nodejs.org/en/) - [NPM](https://www.npmjs.com/get-npm) OR [Yarn](https://yarnpkg.com/en/docs/install#mac-stable)
+[NodeJS](https://nodejs.org/en/) - [NPM](https://www.npmjs.com/get-npm) o [Yarn](https://yarnpkg.com/en/docs/install#mac-stable)
 
 ### Deployment
 
