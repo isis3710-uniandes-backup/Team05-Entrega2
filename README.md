@@ -11,7 +11,7 @@ $ git clone repo
 $ nano repo/server/.env
 ``` 
 
-Llave de acceso a la base de datos MongoDB - Mlab. Debe estar en archivo *.env* preferible dentro del directorio */server*
+Llave de acceso a la base de datos MongoDB - Mlab. Debe estar en archivo **.env** preferible dentro del directorio **/server**
 > MLAB=mongodb://grupo5:printeardb123@ds123500.mlab.com:23500/printeardb
 
 ```ssh
