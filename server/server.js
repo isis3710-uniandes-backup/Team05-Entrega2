@@ -21,7 +21,8 @@ app
 /**
  * MongoDB Connection
  */
-mongoose.connect(process.env.MLAB, { useNewUrlParser: true, useCreateIndex: true });
+mongoose.connect(process.env.MLAB, { useNewUrlParser: true, useCreateIndex: true })
+        .catch(err => console.log(" \n\n------- \nDB Auth Error\nEn .env poner MLAB=mongodb://<dbuser>:<dbpassword>@ds123500.mlab.com:23500/printeardb\nCambiando los valores de <dbuser> y <dbpassword>\n ----------- \n\n", err))
 const db = mongoose.connection
 db.on('error', (err) => console.log('DB Error :: ', err));
 db.once('open', _ => console.log('DB Connection Established.'));
