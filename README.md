@@ -75,7 +75,7 @@ $ npm start
 │       ├── user.test.rest
 │       └── ...
 |
-└──── client
+└── client
     ├── package.json
     ├── .gitignore
     ├── src
