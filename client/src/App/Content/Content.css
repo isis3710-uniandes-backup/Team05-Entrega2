@@ -1,0 +1,37 @@
+
+#ContentWrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#MainContainer {
+    position: absolute;
+    left: 250px;
+    top: 0;
+    width: 80%;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 60px;
+}
+
+.ContentTitle {
+    font-size: 32px;
+}
+
+#ContentHeader {
+    width: 100%;
+}
+
+#ProfileImage {
+    border-radius: 50%;
+    margin-left: 2em;
+}
+
+#ContentDetail {
+    padding-top: 3em;
+}
+
+
+.DetailCard {
+    border-radius: 1em;
+}

@@ -1,0 +1,25 @@
+
+
+#MenuParent {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#MenuChild {
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    width: 80px;
+    min-height: 460px;
+    border-radius: 2em;
+    text-align: center;
+    color: whitesmoke;
+    padding: 2em 0em;
+    background-color: rgb(30, 35, 58);
+    box-shadow: 1px 5px rgb(222, 222, 231);
+}
+
+#MenuChild object {
+    margin-bottom: 1.5em;
+}
