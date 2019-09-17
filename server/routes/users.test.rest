@@ -8,20 +8,20 @@
 GET http://localhost:5000/api/users
 
 ### GET ID
-GET http://localhost:5000/api/users/5d6981af93a56f0d15796894
+GET http://localhost:5000/api/users/5d6d5975d53d5c0438e32a4f
 
 ### POST
 POST http://localhost:5000/api/users
 Content-Type: application/json
 
 {
-    "name": "Name Last",
+    "name": "Last First",
     "email": "user@uniandes.edu.co",
-    "username": "user"
+    "username": "user3"
 }
 
 ### PATCH
-PATCH http://localhost:5000/api/users/5d6981af93a56f0d15796894
+PATCH http://localhost:5000/api/users/5d6d5975d53d5c0438e32a4f
 Content-Type: application/json
 
 {
@@ -29,4 +29,4 @@ Content-Type: application/json
 }
 
 ### DELETE
-DELETE http://localhost:5000/api/users/5d6981af93a56f0d15796894
+DELETE http://localhost:5000/api/users/5d6d5975d53d5c0438e32a4f
