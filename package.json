@@ -25,10 +25,30 @@
   ],
   "author": "Grupo 5",
   "contributors": [
-    { "name": "Sebastian Garcia", "email": "js.garcial1@uniandes.edu.co", "url": "https://seebgar.herokuapp.com" },
-    { "name": "Andres Felipe Losada", "email": "other@example.com", "url": "http://other-website.com" },
-    { "name": "Juan Camilo Pulido", "email": "other@example.com", "url": "http://other-website.com" },
-    { "name": "Santiago Salazar", "email": "other@example.com", "url": "http://other-website.com" },
-    { "name": "Luis Ernesto Viana", "email": "other@example.com", "url": "http://other-website.com" }
+    {
+      "name": "Sebastian Garcia",
+      "email": "js.garcial1@uniandes.edu.co",
+      "url": "https://seebgar.herokuapp.com"
+    },
+    {
+      "name": "Andres Felipe Losada",
+      "email": "other@example.com",
+      "url": "http://other-website.com"
+    },
+    {
+      "name": "Juan Camilo Pulido",
+      "email": "other@example.com",
+      "url": "http://other-website.com"
+    },
+    {
+      "name": "Santiago Salazar",
+      "email": "other@example.com",
+      "url": "http://other-website.com"
+    },
+    {
+      "name": "Luis Ernesto Viana",
+      "email": "le.viana@uniandes.edu.co",
+      "url": "https://vianaernesto.github.io/"
+    }
   ]
 }

@@ -10,6 +10,7 @@ const path = require("path");
  * Routers
  */
 const users_route = require("./routes/users");
+const pedidos_route = require("./routes/pedidos");
 
 var app = express();
 const PORT = normalizePort(process.env.PORT || "5000");
@@ -24,6 +25,7 @@ app
  * Routes
  */
 app.use("/api/users", users_route);
+app.use("/api/pedidos", pedidos_route);
 
 app
   .use(express.static(path.join(__dirname, "../client/build")))
