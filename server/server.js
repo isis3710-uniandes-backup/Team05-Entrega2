@@ -9,7 +9,7 @@ const path = require("path");
 /**
  * Routers
  */
-const users_route = require("./routes/users");
+const usuarios_route = require("./routes/usuarios");
 const pedidos_route = require("./routes/pedidos");
 
 var app = express();
@@ -24,7 +24,7 @@ app
 /**
  * Routes
  */
-app.use("/api/users", users_route);
+app.use("/api/usuarios", usuarios_route);
 app.use("/api/pedidos", pedidos_route);
 
 app

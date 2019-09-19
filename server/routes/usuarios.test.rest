@@ -1,0 +1,32 @@
+
+#
+# USERS API
+#
+
+
+### GET ALL
+GET http://localhost:5000/api/usuarios
+
+### GET ID
+GET http://localhost:5000/api/usuarios/5d6d5975d53d5c0438e32a4f
+
+### POST
+POST http://localhost:5000/api/usuarios
+Content-Type: application/json
+
+{
+    "name": "Last First",
+    "email": "user@uniandes.edu.co",
+    "username": "user3"
+}
+
+### PATCH
+PATCH http://localhost:5000/api/usuarios/5d6d5975d53d5c0438e32a4f
+Content-Type: application/json
+
+{
+    "name": "New Name"
+}
+
+### DELETE
+DELETE http://localhost:5000/api/usuarios/5d6d5975d53d5c0438e32a4f
