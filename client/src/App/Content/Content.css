@@ -2,7 +2,7 @@
 #ContentWrapper {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #MainContainer {
@@ -12,10 +12,12 @@
     width: 80%;
     font-family: 'Nunito', sans-serif;
     padding-top: 60px;
+    margin-bottom: 20vh;
 }
 
 .ContentTitle {
     font-size: 32px;
+    font-family: 'Nunito', sans-serif;
 }
 
 #ContentHeader {
@@ -28,10 +30,14 @@
 }
 
 #ContentDetail {
-    padding-top: 3em;
+    padding-top: 5px;
 }
 
 
 .DetailCard {
     border-radius: 1em;
+}
+
+.AddCard {
+    background-color: rgb(172, 182, 189);
 }

@@ -11,7 +11,7 @@
     top: 60px;
     left: 80px;
     width: 80px;
-    min-height: 460px;
+    min-height: 140px;
     border-radius: 2em;
     text-align: center;
     color: whitesmoke;
@@ -22,4 +22,12 @@
 
 #MenuChild object {
     margin-bottom: 1.5em;
+}
+
+.MenuItem {
+    color: white;
+}
+
+.MenuItem:hover {
+    color: rgb(152, 158, 168);
 }
