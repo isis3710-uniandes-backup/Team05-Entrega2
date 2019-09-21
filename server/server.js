@@ -11,6 +11,7 @@ const path = require("path");
  */
 const usuarios_route = require("./routes/usuarios");
 const pedidos_route = require("./routes/pedidos");
+const servicios_route = require("./routes/servicios");
 
 var app = express();
 const PORT = normalizePort(process.env.PORT || "5000");
@@ -26,6 +27,7 @@ app
  */
 app.use("/api/usuarios", usuarios_route);
 app.use("/api/pedidos", pedidos_route);
+app.use("api/servicios", servicios_route);
 
 app
   .use(express.static(path.join(__dirname, "../client/build")))
