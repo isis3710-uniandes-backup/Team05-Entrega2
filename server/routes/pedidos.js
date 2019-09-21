@@ -68,8 +68,10 @@ router.post("/", (req, res)=>{
         fechaGeneracion : req.body.fechaGeneracion,
         fechaRecogida : req.body.fechaRecogida,
         estado : req.body.estado,
-        usuario : [req.body.usuario],
-        servicio : [req.body.servicio]
+        _idUsuario :  ObjectId(req.body._idUsuario),
+        _idServicio : ObjectId(req.body._idServicio),
+        _idNegocio : ObjectId(req.body._idNegocio)
+
     };
 
     try {
@@ -116,11 +118,14 @@ router.patch("/:id", (req,res) =>{
     if(req.body.estado){
         update.estado = req.body.estado;
     }
-    if(req.body.usuario){
-        update.usuario = [req.body.usuario];
+    if(req.body._idUsuario){
+        update._idUsuario =  ObjectId(req.body._idUsuario);
     }
-    if(req.body.servicio){
-        update.usuario = [req.body.servicio];
+    if(req.body._idServicio){
+        update._idServicio = ObjectId(req.body._idServicio);
+    }
+    if(req.body._idNegocio){
+        update._idNegocio = ObjectId(req.body._idNegocio);
     }
 
     try{
