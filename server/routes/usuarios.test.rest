@@ -8,7 +8,7 @@
 GET http://localhost:5000/api/usuarios
 
 ### GET ID
-GET http://localhost:5000/api/usuarios/5d6d5975d53d5c0438e32a4f
+GET http://localhost:5000/api/usuarios/5d87c2b8e89720237c9b7fec
 
 ### POST
 POST http://localhost:5000/api/usuarios
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### PATCH
-PATCH http://localhost:5000/api/usuarios/5d6d5975d53d5c0438e32a4f
+PATCH http://localhost:5000/api/usuarios/5d87c2b8e89720237c9b7fec
 Content-Type: application/json
 
 {
@@ -31,8 +31,8 @@ Content-Type: application/json
 }
 
 ### DELETE
-DELETE http://localhost:5000/api/usuarios/5d87a842b7248b3458caceb4
+DELETE http://localhost:5000/api/usuarios/5d87c2b8e89720237c9b7fec
 
 
 ### GET ALL pedidos from the user
-GET http://localhost:5000/api/usuarios/5d6d5975d53d5c0438e32a4f/pedidos
+GET http://localhost:5000/api/usuarios/5d87c2b8e89720237c9b7fec/pedidos
