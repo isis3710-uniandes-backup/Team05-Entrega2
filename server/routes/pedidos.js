@@ -23,13 +23,13 @@ router.get("/", (req, res)=>{
             .find({})
             .toArray()
             .then(x => res.status(200).json(x))
-            .catch(err => res.status(500).json({ ErrorCliente: err.message}));
+            .catch(err => res.status(500).json({ message: err.message}));
         })
         .catch(err =>{
-            res.status(500).json({ErrorDatabase: err.message});
+            res.status(500).json({message: err.message});
         });
     } catch(err) {
-        res.status(500).json({ErrorConexion : err.message});
+        res.status(500).json({message : err.message});
     }
 });
 
@@ -46,14 +46,14 @@ router.get("/:id", (req,res) =>{
            .find({ _id: ObjectId(req.params.id)})
            .toArray()
            .then(x=> res.status(200).json(x))
-           .catch(err => res.status(404).json({ErrorGET: err.message}));
+           .catch(err => res.status(404).json({message: err.message}));
         })
         .catch(err =>{
-            res.status(500).json({ErrorDatabase : err.message});
+            res.status(500).json({message : err.message});
         });
 
     } catch(err){
-        res.status(500).json({ErrorConexion: err.message});
+        res.status(500).json({message: err.message});
     }
 });
 
@@ -81,17 +81,17 @@ router.post("/", (req, res)=>{
 
             client.insertOne(new_pedido, (err, result) =>{
                 if(err){
-                    res.status(400).json({ErrorInsercion : err.message});
+                    res.status(400).json({message : err.message});
                     return;
                 }
                 res.status(201).send(result.ops);
             });
         })
         .catch(err =>{
-            res.status(500).json({ErrorDatabase : err.message});
+            res.status(500).json({message : err.message});
         });
     } catch (err) {
-        res.status(500).json({ErrorConexion : err.message});
+        res.status(500).json({message : err.message});
     }
 });
 
@@ -139,7 +139,7 @@ router.patch("/:id", (req,res) =>{
                 {returnOriginal : false},
                 (err, result) =>{
                     if(err){
-                        res.status(400).json({ErrorPUT : err.message});
+                        res.status(400).json({message : err.message});
                         return;
                     }
                     res.status(200).json(result.value);
@@ -147,10 +147,10 @@ router.patch("/:id", (req,res) =>{
             );
         })
         .catch(err =>{
-            res.status(500).json({ErrorDatabase : err.message});
+            res.status(500).json({message : err.message});
         });
     }catch(err){
-        res.status(500).json({ErrorConexion: err.message})
+        res.status(500).json({message: err.message})
     }
 });
 
@@ -167,18 +167,18 @@ router.delete("/:id", (req, res)=>{
                 { _id: ObjectId(req.params.id)}
                 , (err, result) =>{
                     if(err){
-                        res.status(404).json({ErrorDELETE : err.message});
+                        res.status(404).json({message : err.message});
                         return
                     }
-                    res.status(200).send({DELETED :result.value});
+                    res.status(200).send({message :result.value});
                 });
         })
         .catch(err => {
-            res.status(500).json({ ErrorDatabase : err.message});
+            res.status(500).json({ message : err.message});
         });
         
     }catch(err){
-        res.status(500).json({ErrorConexion: err.message});
+        res.status(500).json({message: err.message});
     }
 });
 
@@ -200,14 +200,14 @@ router.get("/nombre/:nombre", (req,res) =>{
            .find({ nombre: req.params.nombre})
            .toArray()
            .then(x=> res.status(200).json(x))
-           .catch(err => res.status(404).json({ErrorGET: err.message}));
+           .catch(err => res.status(404).json({message: err.message}));
         })
         .catch(err =>{
-            res.status(500).json({ErrorDatabase : err.message});
+            res.status(500).json({message : err.message});
         });
 
     } catch(err){
-        res.status(500).json({ErrorConexion: err.message});
+        res.status(500).json({message: err.message});
     }
 });
 

@@ -59,7 +59,7 @@ router.post("/", (req, res) => {
   let metodos = [];
   for(let i of req.body.metodosDePago){
     metodos.push({
-      _id: ObjectId.generate(),
+      _id: ObjectId(),
       nombre: i.nombre,
       tipo: i.tipo,
       numero: i.numero
