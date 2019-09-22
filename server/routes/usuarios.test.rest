@@ -15,8 +15,8 @@ POST http://localhost:5000/api/usuarios
 Content-Type: application/json
 
 {
-    "nombre": "Usuario Tester",
-    "email": "tester@uniandes.edu.co",
+    "nombre": "Camilo Fernandez",
+    "email": "camilo-92@example.com",
     "nombreUsuario": "ElTester",
     "contrasenia": "easypass",
     "tipo": "cliente"

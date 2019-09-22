@@ -2,6 +2,8 @@ import React from "react";
 import Menu from "../Menu/Menu";
 import { NavLink } from "react-router-dom";
 
+import { store } from '../Store/Store';
+
 export default class Usuario extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +34,7 @@ export default class Usuario extends React.Component {
                 />
               </div>
               <div className="uk-card-body">
-                <h3 className="uk-card-title">User Name</h3>
+                <h3 className="uk-card-title">{store.getState().user.nombre}</h3>
 
                 <dl className="uk-description-list uk-description-list-divider">
                   <dt>email</dt>

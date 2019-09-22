@@ -12,6 +12,7 @@ import Usuario from "../Cliente/Usuario";
 import { store } from "../Store/Store";
 import Dashboard from "../Admin/Dashboard";
 import DashboardCliente from "../Cliente/Dashboard";
+import Registration from "./Registration";
 
 function Display(props) {
   return (
@@ -39,6 +40,7 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path="/dashboard" component={Display} />
           <Route path="/usuario/:id" component={Usuario} />
+          <Route path="/registration" component={Registration} />
         </Switch>
       </div>
     );

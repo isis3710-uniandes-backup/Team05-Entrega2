@@ -27,7 +27,7 @@ export default function Negocios(props) {
           id="ContentDetail"
           className="uk-accordion-content uk-child-width-1-4@s uk-grid-match"
           data-uk-grid
-          style={{ minHeight: "150px" }}
+          style={{ minHeight: "220px" }}
         >
           {props.negocios.map((n, i) => {
             return (
@@ -39,7 +39,7 @@ export default function Negocios(props) {
                   cursor: "pointer",
                   width: "20%",
                   margin: "0 2em 2em 2em",
-                  minHeight: "100px"
+                  minHeight: "200px"
                 }}
               >
                 <img

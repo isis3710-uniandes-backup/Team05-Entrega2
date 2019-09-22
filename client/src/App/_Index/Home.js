@@ -26,8 +26,8 @@ export default class Home extends React.Component {
       <div className="uk-light wrap uk-background-norepeat uk-background-cover uk-background-center-center uk-cover-container uk-background-secondary">
         <img
           sizes="100vw"
-          data-src="https://images.pexels.com/photos/1774986/pexels-photo-1774986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-          src="https://images.pexels.com/photos/1774986/pexels-photo-1774986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          data-src="https://images.pexels.com/photos/1111316/pexels-photo-1111316.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+          src="https://images.pexels.com/photos/1111316/pexels-photo-1111316.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
           alt=""
           data-uk-cover
           data-uk-img
@@ -77,7 +77,7 @@ export default class Home extends React.Component {
               <Link to="/dashboard" >
 
               <a
-                className="uk-button uk-button-default uk-button-large uk-width-2-3 uk-width-auto@s"
+                className="uk-button uk-button-primary uk-button-medum uk-width-1-3 uk-width-auto@s"
                 data-uk-icon="arrow-right"
                 title="Learn More"
                 onClick={_ => this.handle_longin()}
@@ -85,15 +85,31 @@ export default class Home extends React.Component {
                 Ingresar como cliente
               </a>
               </Link>
+
+              <br/>
+
               <Link to="/dashboard" >
 
               <a
-                className="uk-button uk-button-primary uk-button-large uk-width-2-3 uk-width-auto@s"
+                className="uk-button uk-button-primary uk-button-medium uk-width-1-3 uk-width-auto@s"
                 data-uk-icon="check"
                 title="Learn More"
                 onClick={_ => this.handle_longin_admin()}
               >
                 Ingresar como administrador de un negocio
+              </a>
+              </Link>
+
+              <br/>
+
+              <Link to="/registration" >
+
+              <a
+                className="uk-button uk-button-primary uk-button-medium uk-width-1-3 uk-width-auto@s"
+                data-uk-icon="check"
+                title="Learn More"
+              >
+                Registrate
               </a>
               </Link>
             </div>
