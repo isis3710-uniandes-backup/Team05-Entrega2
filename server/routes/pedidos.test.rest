@@ -1,0 +1,47 @@
+#
+#   Pedidos API
+#
+
+### GET ALL pedidos
+GET http://localhost:5000/api/pedidos
+
+### GET ID
+GET http://localhost:5000/api/pedidos/5d8575906146dd2eb85fee7b
+
+### GET nombre
+GET http://localhost:5000/api/pedidos/nombre/Pedido Prueba1
+
+### POST
+POST http://localhost:5000/api/pedidos
+Content-Type: application/json
+
+{
+	"nombre" : "Pedido Prueba3",
+	"descripcion" : "Descripcion Pedido Prueba3",
+	"adjunto" : "https://abbeyroad.thebeatles.com/",
+	"fechaGeneracion" : "2018-04-23T18:25:43.511Z",
+	"fechaRecogida" : "2019-08-23T18:25:43.511Z",
+	"estado" : false,
+	"_idUsuario": "5d8575596146dd2eb85fee7a",
+	"_idServicio": "5d8575596146dd2eb85fee7a",
+	"_idNegocio": "5d8575596146dd2eb85fee7a"
+}
+
+### PATCH
+PATCH http://localhost:5000/api/pedidos/5d8575596146dd2eb85fee7a
+Content-Type: application/json
+
+{
+	"nombre" : "Pedido Prueba3",
+	"descripcion" : "Descripcion Pedido Prueba3 PATCH",
+	"adjunto" : "https://www.thebeatles.com/",
+	"fechaGeneracion" : "2015-04-23T18:25:43.511Z",
+	"fechaRecogida" : "2018-08-23T18:25:43.511Z",
+	"estado" : false,
+	"_idUsuario": "5d8575596146dd2eb85fee7b",
+	"_idServicio": "5d8575596146dd2eb85fee7b",
+	"_idNegocio": "5d8575596146dd2eb85fee7b"
+}
+
+### DELETE
+DELETE http://localhost:5000/api/pedidos/5d8575906146dd2eb85fee7b
