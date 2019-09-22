@@ -4,6 +4,8 @@ import "./Menu.css";
 
 import { NavLink } from "react-router-dom";
 
+import { store } from "../Store/Store";
+
 export default class Menu extends React.Component {
   render() {
     return (
@@ -18,16 +20,22 @@ export default class Menu extends React.Component {
           </NavLink>
           <br />
           <br />
-          {/* TIENDAS DE ADMIN */}
-          <NavLink to="/tiendas" className="MenuItem">
-            <ion-icon size="large" name="appstore"></ion-icon>
-          </NavLink>
-          <br />
-          <br />
           {/* MEDIOS DE PAFGO DE USUARIO */}
-          <ion-icon size="large" name="card"></ion-icon>
-          <br />
-          <br />
+          {store.getState() === "CLIENTE" ? (
+            <div>
+              <NavLink to="/tiendas" className="MenuItem">
+                <ion-icon size="large" name="appstore"></ion-icon>
+              </NavLink>
+              <br />
+              <br />
+              <ion-icon size="large" name="card"></ion-icon>
+              <br />
+              <br />
+            </div>
+          ) : (
+            <span></span>
+          )}
+
           <NavLink to="/usuario/44" className="MenuItem">
             <ion-icon size="large" name="person"></ion-icon>
           </NavLink>

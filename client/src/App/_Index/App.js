@@ -11,12 +11,27 @@ import Menu from "../Menu/Menu";
 import Content from "../Content/Content";
 import Usuario from "../Content/Usuario";
 import Tiendas from "../Content/Tiendas";
+import Form from "../Post/Form";
 
-function Dashboard() {
+import { store } from "../Store/Store";
+import Admin from "../Content/Admin";
+
+function Dashboard(props) {
   return (
     <div>
-      <Menu />
-      <Content />
+      {store.getState() === "CLIENTE" ? (
+        <div>
+          <Menu />
+          <Content />
+        </div>
+      ) : (
+        <div>
+          <div>
+            <Menu />
+            <Admin />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -30,6 +45,7 @@ class App extends React.Component {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/usuario/:id" component={Usuario} />
           <Route path="/tiendas" component={Tiendas} />
+          <Route path="/pedidos/post" component={Form} />
         </Switch>
       </div>
     );

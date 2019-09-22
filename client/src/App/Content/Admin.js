@@ -3,7 +3,7 @@ import React from "react";
 import { MenuUsuario } from "../Content/Usuario";
 import Menu from "../Menu/Menu";
 
-export default class Tiendas extends React.Component {
+export default class Admin extends React.Component {
   render() {
     return (
       <div>
@@ -29,7 +29,7 @@ export default class Tiendas extends React.Component {
               data-uk-grid
             >
               {/* LOOP AQUI */}
-              <div style={{minHeight: '150px'}}>
+              <div style={{ minHeight: "150px" }}>
                 <div className="DetailCard uk-card uk-card-default uk-card-hover uk-card-body uk-cover-container uk-inline">
                   <img
                     src="https://images.pexels.com/photos/6663/desk-white-black-header.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -46,8 +46,7 @@ export default class Tiendas extends React.Component {
                 </div>
               </div>
 
-
-              <div style={{minHeight: '150px'}}>
+              <div style={{ minHeight: "150px" }}>
                 <div className="DetailCard uk-card uk-card-default uk-card-hover uk-card-body uk-cover-container uk-inline">
                   <img
                     src="https://images.pexels.com/photos/6663/desk-white-black-header.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -64,9 +63,7 @@ export default class Tiendas extends React.Component {
                 </div>
               </div>
 
-
-
-              <div style={{minHeight: '150px'}}>
+              <div style={{ minHeight: "150px" }}>
                 <div className="DetailCard uk-card uk-card-default uk-card-hover uk-card-body uk-cover-container uk-inline">
                   <img
                     src="https://images.pexels.com/photos/6663/desk-white-black-header.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -83,8 +80,7 @@ export default class Tiendas extends React.Component {
                 </div>
               </div>
 
-
-              <div style={{minHeight: '150px'}}>
+              <div style={{ minHeight: "150px" }}>
                 <div className="DetailCard uk-card uk-card-default uk-card-hover uk-card-body uk-cover-container uk-inline">
                   <img
                     src="https://images.pexels.com/photos/6663/desk-white-black-header.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -100,9 +96,63 @@ export default class Tiendas extends React.Component {
                   </h3>
                 </div>
               </div>
-
             </div>
             <hr />
+
+            <br />
+
+            {/* DINAMICO AQUI */}
+            <div>
+              <h1 className="ContentTitle">Pedidos Tienda A</h1>
+            </div>
+
+            {/* LOOP AQUI */}
+            <dl class="uk-description-list uk-description-list-divider">
+              <dt>Description term</dt>
+              <dd className="uk-flex uk-flex-between">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div>
+                  <button
+                    className="uk-button uk-button-primary"
+                    style={{ borderRadius: "1em" }}
+                  >
+                    Completado
+                  </button>
+                </div>
+              </dd>
+
+              <dt>Description term</dt>
+              <dd className="uk-flex uk-flex-between">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div>
+                  <button
+                    className="uk-button uk-button-primary"
+                    style={{ borderRadius: "1em" }}
+                  >
+                    Completado
+                  </button>
+                </div>
+              </dd>
+
+              <dt>Description term</dt>
+              <dd className="uk-flex uk-flex-between">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div>
+                  <button
+                    className="uk-button uk-button-primary"
+                    style={{ borderRadius: "1em" }}
+                  >
+                    Completado
+                  </button>
+                </div>
+              </dd>
+            </dl>
           </div>
         </div>
       </div>

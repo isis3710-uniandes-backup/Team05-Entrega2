@@ -10,6 +10,13 @@ export default class Home extends React.Component {
     });
   }
 
+  handle_longin_admin(event) {
+    store.dispatch({
+      type: "ADMIN",
+      state: store.getState()
+    });
+  }
+
   componentDidMount() {
     store.subscribe(() => this.forceUpdate());
   }
@@ -19,6 +26,10 @@ export default class Home extends React.Component {
       <div>
         <Link to="/dashboard" >
         <button onClick={this.handle_longin}>Ingresar</button>
+        </Link>
+
+        <Link to="/dashboard" >
+        <button onClick={this.handle_longin_admin}>Admin</button>
         </Link>
         
       </div>
