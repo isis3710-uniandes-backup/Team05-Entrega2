@@ -44,8 +44,8 @@ export default class Home extends React.Component {
               >
                 <div className="uk-navbar-left">
                   <div className="uk-navbar-item">
-                    <a className="uk-logo" href="">
-                      <img src="img/cover-logo.svg" alt="Logo" />
+                    <a className="uk-logo" href="#">
+                      <img src="../../assets/prin.png" alt="Logo" width="100" />
                     </a>
                   </div>
                 </div>
@@ -61,12 +61,12 @@ export default class Home extends React.Component {
               className="uk-heading-primary animate uk-invisible"
               style={{ fontWeight: "700" }}
             >
-              Sleek, Fast and Reliable.
+              Imprime donde quieras, Recoge cuando gustes
             </h1>
             <div className="uk-width-4-5@m uk-margin-auto animate uk-invisible">
               <p className="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad,
-                reiciendis maxime, facilis nam natus incidunt provident.
+                La mejor forma de encargar tus impresiones a tu tienda preferida y 
+                recogerlas cuando quieras. ¡Evita las filas y únete ahora!
               </p>
             </div>
             <div
