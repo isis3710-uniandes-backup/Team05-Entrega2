@@ -51,3 +51,20 @@ Content-Type: application/json
     "_idServicio": "5d87906ce0d997f7df9374c3",
     "_idNegocio" : "5d87906ce0d997f7df9374c3"
 }
+
+### GET ALL PEDIDOS FROM NEGOCIO
+
+GET http://localhost:5000/api/negocios/5d87906ce0d997f7df9374c3/servicios
+ 
+
+### CREATE SERVICIO
+ 
+POST http://localhost:5000/api/servicios
+Content-Type: application/json
+
+{
+    "tipo": "Impresión",
+    "costo": "1000",
+    "_idNegocio": "5d87906ce0d997f7df9374c3",
+    "_idPedido": "5d87906ce0d997f7df9374c3"
+}
