@@ -24,15 +24,15 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <div className="uk-light wrap uk-background-norepeat uk-background-cover uk-background-center-center uk-cover-container uk-background-secondary">
-        <img
+      <div className="uk-light wrap uk-background-norepeat uk-background-cover uk-background-center-center uk-cover-container uk-background-default">
+        {/* <img
           sizes="100vw"
           data-src="https://images.pexels.com/photos/1774986/pexels-photo-1774986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           src="https://images.pexels.com/photos/1774986/pexels-photo-1774986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt=""
           data-uk-cover
           data-uk-img
-        />
+        /> */}
         <div
           className="uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-position-z-index uk-position-relative"
           data-uk-height-viewport="min-height: 400"
@@ -46,7 +46,7 @@ export default class Home extends React.Component {
                 <div className="uk-navbar-left">
                   <div className="uk-navbar-item">
                     <a className="uk-logo" href="#">
-                      <img src={logo} alt="Logo" width="80" />
+                      <img src={logo} alt="Logo" />
                     </a>
                   </div>
                 </div>
@@ -60,12 +60,12 @@ export default class Home extends React.Component {
           >
             <h1
               className="uk-heading-primary animate uk-invisible"
-              style={{ fontWeight: "700" }}
+              style={{ fontWeight: "700", color: "#41748C" }}
             >
               Imprime donde quieras, Recoge cuando gustes
             </h1>
             <div className="uk-width-4-5@m uk-margin-auto animate uk-invisible">
-              <p className="lead">
+              <p className="lead" style={{ color: "#41748C" }}>
                 La mejor forma de encargar tus impresiones a tu tienda preferida y 
                 recogerlas cuando quieras. ¡Evita las filas y únete ahora!
               </p>
@@ -80,7 +80,7 @@ export default class Home extends React.Component {
               <a
                 className="uk-button uk-button-default uk-button-large uk-width-2-3 uk-width-auto@s"
                 data-uk-icon="arrow-right"
-                title="Learn More"
+                title="Ingresar como cliente"
                 onClick={_ => this.handle_longin()}
               >
                 Ingresar como cliente
@@ -91,7 +91,7 @@ export default class Home extends React.Component {
               <a
                 className="uk-button uk-button-primary uk-button-large uk-width-2-3 uk-width-auto@s"
                 data-uk-icon="check"
-                title="Learn More"
+                title="Ingresar como administrador de un negocio"
                 onClick={_ => this.handle_longin_admin()}
               >
                 Ingresar como administrador de un negocio
