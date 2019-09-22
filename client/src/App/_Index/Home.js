@@ -45,7 +45,7 @@ export default class Home extends React.Component {
               >
                 <div className="uk-navbar-left">
                   <div className="uk-navbar-item">
-                    <a className="uk-logo" href="#">
+                    <a className="uk-logo" >
                       <img src={logo} alt="Logo" />
                     </a>
                   </div>
@@ -80,7 +80,7 @@ export default class Home extends React.Component {
                   <a
                     className="uk-button uk-button-primary uk-button-medum uk-width-1-3 uk-width-auto@s"
                     data-uk-icon="arrow-right"
-                    title="Learn More"
+                    title="Ingresar como cliente"
                     onClick={_ => this.handle_longin()}
                   >
                     Ingresar como cliente
@@ -93,7 +93,7 @@ export default class Home extends React.Component {
                   <a
                     className="uk-button uk-button-primary uk-button-medium uk-width-1-3 uk-width-auto@s"
                     data-uk-icon="check"
-                    title="Learn More"
+                    title="Ingresar como administrador de un negocio"
                     onClick={_ => this.handle_longin_admin()}
                   >
                     Ingresar como administrador de un negocio
@@ -106,7 +106,7 @@ export default class Home extends React.Component {
                   <a
                     className="uk-button uk-button-primary uk-button-medium uk-width-1-3 uk-width-auto@s"
                     data-uk-icon="check"
-                    title="Learn More"
+                    title="Registrate"
                   >
                     Registrate
                   </a>
