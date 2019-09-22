@@ -8,25 +8,31 @@
 GET http://localhost:5000/api/usuarios
 
 ### GET ID
-GET http://localhost:5000/api/usuarios/5d6d5975d53d5c0438e32a4f
+GET http://localhost:5000/api/usuarios/5d87c2b8e89720237c9b7fec
 
 ### POST
 POST http://localhost:5000/api/usuarios
 Content-Type: application/json
 
 {
-    "name": "Last First",
-    "email": "user@uniandes.edu.co",
-    "username": "user3"
+    "nombre": "Usuario Tester",
+    "email": "tester@uniandes.edu.co",
+    "nombreUsuario": "ElTester",
+    "contrasenia": "easypass",
+    "tipo": "cliente"
 }
 
 ### PATCH
-PATCH http://localhost:5000/api/usuarios/5d6d5975d53d5c0438e32a4f
+PATCH http://localhost:5000/api/usuarios/5d87c2b8e89720237c9b7fec
 Content-Type: application/json
 
 {
-    "name": "New Name"
+    "nombre": "New Name"
 }
 
 ### DELETE
-DELETE http://localhost:5000/api/usuarios/5d6d5975d53d5c0438e32a4f
+DELETE http://localhost:5000/api/usuarios/5d87c2b8e89720237c9b7fec
+
+
+### GET ALL pedidos from the user
+GET http://localhost:5000/api/usuarios/5d87c2b8e89720237c9b7fec/pedidos

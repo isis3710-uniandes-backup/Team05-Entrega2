@@ -1,0 +1,31 @@
+
+#
+# METODOSDEPAGO API
+#
+
+### GET ALL METODOSDEPAGO
+GET http://localhost:5000/api/usuarios/5d87c0910a17c33d44264fdd/metodosDePago
+
+### GET ID METODOSDEPAGO
+GET http://localhost:5000/api/usuarios/5d87c0910a17c33d44264fdd/metodosDePago/5d87c1390a17c33d44264fde
+
+### POST METODOSDEPAGO
+POST http://localhost:5000/api/usuarios/5d87c0910a17c33d44264fdd/metodosDePago
+Content-Type: application/json
+
+{
+    "nombre": "ElBillete",
+    "tipo": "tarjeta",
+    "numero": "25000.0"
+}
+
+### PATCH METODOSDEPAGO
+PATCH http://localhost:5000/api/usuarios/5d87c0910a17c33d44264fdd/metodosDePago/5d87c1390a17c33d44264fde
+Content-Type: application/json
+
+{
+    "nombre": "MiNuevoDinerito:D"
+}
+
+### DELETE METODOSDEPAGO
+DELETE http://localhost:5000/api/usuarios/5d87c0910a17c33d44264fdd/metodosDePago/5d87c1390a17c33d44264fde

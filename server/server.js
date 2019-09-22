@@ -5,6 +5,7 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
+const { Connection } = require("./mongo_config/Connection");
 
 /**
  * Routers
@@ -26,10 +27,10 @@ app
 /**
  * Routes
  */
-app.use("/api/usuarios", usuarios_route);
 app.use("/api/pedidos", pedidos_route);
 app.use("/api/servicios", servicios_route);
 app.use("/api/negocios", negocios_route);
+app.use("/api/usuarios", usuarios_route);
 
 app
   .use(express.static(path.join(__dirname, "../client/build")))
@@ -40,7 +41,10 @@ app
 /**
  * Listen
  */
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
+  Connection.connectToMongo();
+});
 
 /**
  * Get port from environment and store in Express.
