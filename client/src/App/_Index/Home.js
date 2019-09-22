@@ -1,6 +1,7 @@
 import React from "react";
 import { store } from "../Store/Store";
 import { Link } from "react-router-dom";
+import logo from '../../assets/logo.svg';
 
 export default class Home extends React.Component {
   handle_longin(event) {
@@ -45,7 +46,7 @@ export default class Home extends React.Component {
                 <div className="uk-navbar-left">
                   <div className="uk-navbar-item">
                     <a className="uk-logo" href="#">
-                      <img src="../../assets/prin.png" alt="Logo" width="100" />
+                      <img src={logo} alt="Logo" width="80" />
                     </a>
                   </div>
                 </div>
