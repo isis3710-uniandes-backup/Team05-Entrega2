@@ -27,7 +27,7 @@ app
  */
 app.use("/api/usuarios", usuarios_route);
 app.use("/api/pedidos", pedidos_route);
-app.use("api/servicios", servicios_route);
+app.use("/api/servicios", servicios_route);
 
 app
   .use(express.static(path.join(__dirname, "../client/build")))
