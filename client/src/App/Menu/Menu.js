@@ -1,49 +1,35 @@
 import React from "react";
 
-import homeIcon from "../../assets/home.svg";
-import signIcon from "../../assets/sign-in.svg";
-import outIcon from "../../assets/sign-out.svg";
-import userIcon from "../../assets/user.svg";
-import peopleIcon from "../../assets/people.svg";
-
 import "./Menu.css";
 
-export default class Menu extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+import { NavLink } from "react-router-dom";
 
+import { store } from "../Store/Store";
+
+export default class Menu extends React.Component {
   render() {
     return (
-      <div id="MenuParent">
+      <div id="MenuParent" style={{ zIndex: "100" }}>
         <div id="MenuChild">
-          <object data={homeIcon} type="image/svg+xml">
-            <img src={homeIcon} alt="Home Icon" />
-          </object>
+          <NavLink to="/" className="MenuItem">
+            <ion-icon size="large" name="PRINT"></ion-icon>
+          </NavLink>
+          <hr />
+          <NavLink to="/dashboard" className="MenuItem">
+            <ion-icon size="large" name="home"></ion-icon>
+          </NavLink>
           <br />
-          <object data={signIcon} type="image/svg+xml">
-            <img src={signIcon} alt="Sign In Icon" />
-          </object>
           <br />
-          <object data={outIcon} type="image/svg+xml">
-            <img src={outIcon} alt="Sign In Icon" />
-          </object>
+          <NavLink to="/usuario/44" className="MenuItem">
+            <ion-icon size="large" name="person"></ion-icon>
+          </NavLink>
           <br />
-          <object data={signIcon} type="image/svg+xml">
-            <img src={signIcon} alt="Sign In Icon" />
-          </object>
           <br />
-          <object data={outIcon} type="image/svg+xml">
-            <img src={outIcon} alt="Sign In Icon" />
-          </object>
+          <NavLink to="/" className="MenuItem">
+            <ion-icon size="large" name="log-out"></ion-icon>
+          </NavLink>
           <br />
-          <object data={signIcon} type="image/svg+xml">
-            <img src={signIcon} alt="Sign In Icon" />
-          </object>
           <br />
-          <object data={outIcon} type="image/svg+xml">
-            <img src={outIcon} alt="Sign In Icon" />
-          </object>
         </div>
       </div>
     );
