@@ -1,0 +1,32 @@
+#
+#   Negocios API
+#
+
+### GET ALL negocios
+GET http://localhost:5000/api/negocios
+
+### GET ID
+GET http://localhost:5000/api/negocios/5d86c39af9745eb81ba2642e
+
+### POST
+POST http://localhost:5000/api/negocios
+Content-Type: application/json
+
+{
+    "nombre": "UniCopias",
+    "direccion": "carrera 13#152-80",
+    "categorias": ["impresiones","plotter","escaner"],
+    "idUsuario": "5d6d5975d53d5c0438e32a4f"
+}
+
+### PATCH
+PATCH http://localhost:5000/api/negocios/5d86c39af9745eb81ba2642e
+Content-Type: application/json
+
+{
+    "nombre": "Nuevo nombre",
+    "direccion": "calle 152#152-80"
+}
+
+### DELETE
+DELETE http://localhost:5000/api/negocios/5d86c39af9745eb81ba2642e

@@ -1,7 +1,7 @@
 {
   "name": "printear",
   "description": "Printear - Proyecto Programación Web",
-  "homepage" : "https://printear.herokuapp.com",
+  "homepage": "https://printear.herokuapp.com",
   "version": "1.0.0",
   "main": "./server/server.js",
   "engines": {
