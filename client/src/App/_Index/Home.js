@@ -26,8 +26,8 @@ export default class Home extends React.Component {
       <div className="uk-light wrap uk-background-norepeat uk-background-cover uk-background-center-center uk-cover-container uk-background-secondary">
         <img
           sizes="100vw"
-          data-src="https://images.pexels.com/photos/1111316/pexels-photo-1111316.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          src="https://images.pexels.com/photos/1111316/pexels-photo-1111316.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+          data-src="https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          src="https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           alt=""
           data-uk-cover
           data-uk-img
@@ -74,44 +74,50 @@ export default class Home extends React.Component {
               data-uk-margin
               data-uk-scrollspy-className="uk-animation-fade uk-invisible"
             >
-              <Link to="/dashboard" >
+              <div><Link to="/dashboard" >
 
-              <a
-                className="uk-button uk-button-primary uk-button-medum uk-width-1-3 uk-width-auto@s"
-                data-uk-icon="arrow-right"
-                title="Learn More"
-                onClick={_ => this.handle_longin()}
-              >
-                Ingresar como cliente
-              </a>
-              </Link>
+<a
+  className="uk-button uk-button-primary uk-button-medum uk-width-1-3 uk-width-auto@s"
+  data-uk-icon="arrow-right"
+  title="Learn More"
+  onClick={_ => this.handle_longin()}
+>
+  Ingresar como cliente
+</a>
+</Link></div>
 
-              <br/>
-
-              <Link to="/dashboard" >
-
-              <a
-                className="uk-button uk-button-primary uk-button-medium uk-width-1-3 uk-width-auto@s"
-                data-uk-icon="check"
-                title="Learn More"
-                onClick={_ => this.handle_longin_admin()}
-              >
-                Ingresar como administrador de un negocio
-              </a>
-              </Link>
 
               <br/>
 
-              <Link to="/registration" >
+            <div>
+            <Link to="/dashboard" >
 
-              <a
-                className="uk-button uk-button-primary uk-button-medium uk-width-1-3 uk-width-auto@s"
-                data-uk-icon="check"
-                title="Learn More"
-              >
-                Registrate
-              </a>
-              </Link>
+<a
+  className="uk-button uk-button-primary uk-button-medium uk-width-1-3 uk-width-auto@s"
+  data-uk-icon="check"
+  title="Learn More"
+  onClick={_ => this.handle_longin_admin()}
+>
+  Ingresar como administrador de un negocio
+</a>
+</Link>
+            </div>
+
+              <br/>
+
+             <div>
+             <Link to="/registration" >
+
+<a
+  className="uk-button uk-button-primary uk-button-medium uk-width-1-3 uk-width-auto@s"
+  data-uk-icon="check"
+  title="Learn More"
+>
+  Registrate
+</a>
+</Link>
+             </div>
+
             </div>
           </div>
 

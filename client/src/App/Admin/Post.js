@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from 'react-router-dom';
+
 export default function Post(props) {
   return (
     <div>
@@ -67,10 +69,11 @@ export default function Post(props) {
           </div>
         </div>
 
-        <div className="uk-margin">
-            <button className="uk-button uk-button-primary" type="submit">
-                Enviar
-            </button>
+        <div className="uk-margin uk-flex">
+          <button className="uk-button uk-button-primary" type="submit">
+            Enviar
+          </button>
+   
         </div>
       </form>
     </div>

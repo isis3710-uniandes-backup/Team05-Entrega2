@@ -58,13 +58,6 @@ export default class Dashboard extends React.Component {
       nombre: event.target.nombre.value,
       direccion: event.target.direccion.value
     };
-    let servicios = [];
-    event.target.servicio.forEach(serv => {
-      servicios.push({
-        tipo: serv.value,
-        costo: 100
-      });
-    });
 
     fetch(store.getState().url_negocios, {
       method: "post",
@@ -75,15 +68,6 @@ export default class Dashboard extends React.Component {
         "Access-Control-Allow-Origin": "http://localhost:3000"
       }
     })
-      .then(res => {
-        if (res.status !== 500) {
-          const id = this.state.negocios.filter(
-            x => x.nombre === negocio.nombre
-          );
-          console.log(id);
-          this.agregar_servicios(servicios, id);
-        }
-      })
       .catch(err => {
         console.log(err.message);
       });
@@ -133,6 +117,7 @@ export default class Dashboard extends React.Component {
       })
       .then(data => {
         if (data) {
+          data = data.slice(0, 6);
           this.setState({ negocios: data });
         }
       })

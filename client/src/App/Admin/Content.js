@@ -19,29 +19,37 @@ export default function Content(props) {
         {/*  */}
         {/* NEOGCIOS DE UN ADMINISTRADOR */}
         {/*  */}
-        
-        <Negocios negocios={props.negocios} handle_select={props.handle_select} onShowForm={props.onShowForm} rol={props.rol} />
-        <hr />
-        <br />
 
-        {/*  */}
-        {/* PEDIDOS DE UN NEGOCIO SELECCIONADO */}
-        {/*  */}
+        {!props.showForm ? (
+          <React.Fragment>
+            <Negocios
+              negocios={props.negocios}
+              handle_select={props.handle_select}
+              onShowForm={props.onShowForm}
+              rol={props.rol}
+            />
+            <hr />
+            <br />
 
-        <Pedidos selected={props.selected} pedidos={props.pedidos} date_ops={props.date} />
+            {/*  */}
+            {/* PEDIDOS DE UN NEGOCIO SELECCIONADO */}
+            {/*  */}
 
-        {/*  */}
-        {/* SERVICIOS DE UN NEGOCIO SELECCIONADO */}
-        {/*  */}
+            <Pedidos
+              selected={props.selected}
+              pedidos={props.pedidos}
+              date_ops={props.date}
+            />
 
-        <Servicios selected={props.selected} servicios={props.servicios} />
+            {/*  */}
+            {/* SERVICIOS DE UN NEGOCIO SELECCIONADO */}
+            {/*  */}
 
-        {/*  */}
-        {/* FORM PARA AGREGAR UN NEGOCIO */}
-        {/*  */}
-
-        {props.showForm ? <Post handle_onPost={props.handle_onPost} /> : <span></span>}
-        
+            <Servicios selected={props.selected} servicios={props.servicios} />
+          </React.Fragment>
+        ) : (
+          <Post handle_onPost={props.handle_onPost}/>
+        )}
       </div>
     </div>
   );

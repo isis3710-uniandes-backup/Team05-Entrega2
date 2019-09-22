@@ -35,6 +35,10 @@ export default class Registration extends React.Component {
           console.log(data);
           store.dispatch({
             type: "CLIENTE",
+            state: store.getState()
+          });
+          store.dispatch({
+            type: "SET",
             user: user,
             state: store.getState()
           });
