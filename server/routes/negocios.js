@@ -5,6 +5,7 @@ const { Connection } = require("../mongo_config/Connection");
 
 const db = "printeardb";
 const collection = "negocios";
+const pedidosCollection = "pedidos";
 
 /**
  * Get all negocios, permite obtener todos los negocios de la base de datos
@@ -156,6 +157,29 @@ router.delete("/:idNegocio", (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
+
+/**
+ * GET all pedidos from negocio given an id
+ */
+router.get("/:idNegocio/pedidos", (req,res) => {
+    try {
+        Connection.connectToMongo()
+            .then(database => {
+                const client = database.db(db).collection(pedidosCollection);
+
+                client
+                    .find({ _idNegocio: ObjectId(req.params.idNegocio) })
+                    .toArray()
+                    .then(x => res.status(200).json(x))
+                    .catch(err => res.status(404).json({ message: err.message }));
+            })
+            .catch(err => {
+                res.status(500).json({ message: err.message });
+            });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+})
 
 /**
  * ? Export

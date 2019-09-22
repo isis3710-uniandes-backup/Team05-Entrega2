@@ -30,3 +30,24 @@ Content-Type: application/json
 
 ### DELETE
 DELETE http://localhost:5000/api/negocios/5d86c39af9745eb81ba2642e
+
+### GET ALL PEDIDOS FROM NEGOCIO
+
+GET http://localhost:5000/api/negocios/5d87906ce0d997f7df9374c3/pedidos
+
+### CREATE PEDIDO
+
+POST http://localhost:5000/api/pedidos
+Content-Type: application/json
+
+{
+    "nombre": "5d87906ce0d997f7df9374c3",
+    "descripcion": "5d87906ce0d997f7df9374c3",
+    "adjunto": "5d87906ce0d997f7df9374c3",
+    "fechaGeneracion": "5d87906ce0d997f7df9374c3",
+    "fechaRecogida" : "5d87906ce0d997f7df9374c3",
+    "estado" : "5d87906ce0d997f7df9374c3",
+    "_idUsuario": "5d87906ce0d997f7df9374c3",
+    "_idServicio": "5d87906ce0d997f7df9374c3",
+    "_idNegocio" : "5d87906ce0d997f7df9374c3"
+}
