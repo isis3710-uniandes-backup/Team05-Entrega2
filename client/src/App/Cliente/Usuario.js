@@ -5,8 +5,11 @@ import { NavLink } from "react-router-dom";
 export default class Usuario extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      user: {},
+    };
   }
+
   render() {
     return (
       <div>

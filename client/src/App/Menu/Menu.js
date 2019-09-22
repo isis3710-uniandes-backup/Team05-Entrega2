@@ -21,7 +21,7 @@ export default class Menu extends React.Component {
           <br />
           <br />
           {/* MEDIOS DE PAFGO DE USUARIO */}
-          {store.getState() === "CLIENTE" ? (
+          {store.getState().rol === "CLIENTE" ? (
             <div>
               <NavLink to="/tiendas" className="MenuItem">
                 <ion-icon size="large" name="appstore"></ion-icon>

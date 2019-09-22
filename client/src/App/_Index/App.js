@@ -7,28 +7,23 @@ import "uikit/dist/js/uikit.min.js";
 import { Switch, Route } from "react-router-dom";
 
 import Home from "./Home";
-import Menu from "../Menu/Menu";
-import Content from "../Content/Content";
-import Usuario from "../Content/Usuario";
-import Tiendas from "../Content/Tiendas";
-import Form from "../Post/Form";
+import Usuario from "../Cliente/Usuario";
 
 import { store } from "../Store/Store";
-import Admin from "../Content/Admin";
+import Dashboard from "../Admin/Dashboard";
+import DashboardCliente from "../Cliente/Dashboard";
 
-function Dashboard(props) {
+function Display(props) {
   return (
     <div>
-      {store.getState() === "CLIENTE" ? (
+      {store.getState().rol === "CLIENTE" ? (
         <div>
-          <Menu />
-          <Content />
+          <DashboardCliente />
         </div>
       ) : (
         <div>
           <div>
-            <Menu />
-            <Admin />
+            <Dashboard />
           </div>
         </div>
       )}
@@ -42,10 +37,8 @@ class App extends React.Component {
       <div id="App">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/dashboard" component={Display} />
           <Route path="/usuario/:id" component={Usuario} />
-          <Route path="/tiendas" component={Tiendas} />
-          <Route path="/pedidos/post" component={Form} />
         </Switch>
       </div>
     );
