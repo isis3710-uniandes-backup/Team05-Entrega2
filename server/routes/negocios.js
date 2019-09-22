@@ -62,7 +62,7 @@ router.post("/", (req, res) => {
         nombre: req.body.nombre,
         direccion: req.body.direccion,
         categorias: req.body.categorias,
-        _idUsuario: req.body.idUsuario
+        _idUsuario: ObjectId(req.body.idUsuario)
     };
 
     try {

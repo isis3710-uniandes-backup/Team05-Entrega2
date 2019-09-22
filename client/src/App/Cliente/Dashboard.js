@@ -48,6 +48,7 @@ export default class DashboardCliente extends React.Component {
       })
       .then(data => {
         if (data) {
+          data = data.slice(0, 6)
           this.setState({ negocios: data });
         }
       })
@@ -75,8 +76,8 @@ export default class DashboardCliente extends React.Component {
       .then(data => {
         if (data) {
           this.setState({
-            completados: data.filter(x => x.estado),
-            pendientes: data.filter(x => !x.estado)
+            completados: data.filter(x => x.estado).slice(0, 15),
+            pendientes: data.filter(x => !x.estado).slice(0, 15)
           });
         }
       })

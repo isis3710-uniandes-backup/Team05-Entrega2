@@ -28,9 +28,6 @@ export default class Menu extends React.Component {
               </NavLink>
               <br />
               <br />
-              <ion-icon size="large" name="card"></ion-icon>
-              <br />
-              <br />
             </div>
           ) : (
             <span></span>
