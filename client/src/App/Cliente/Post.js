@@ -9,7 +9,7 @@ export default function Post(props) {
           <input
             className="uk-input uk-form-width-large"
             type="text"
-            placeholder="Nombre del negocio"
+            placeholder="Qué servicio requieres"
             name="nombre"
           />
         </div>

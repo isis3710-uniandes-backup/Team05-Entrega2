@@ -54,6 +54,7 @@ export default class Dashboard extends React.Component {
    */
   handle_onPost(event) {
     event.preventDefault();
+    this.setState({showForm: false})
     const negocio = {
       nombre: event.target.nombre.value,
       direccion: event.target.direccion.value
