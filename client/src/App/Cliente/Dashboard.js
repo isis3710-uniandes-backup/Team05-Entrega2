@@ -128,6 +128,7 @@ export default class DashboardCliente extends React.Component {
     }).catch(err => {
       console.log(err.message);
     });
+    this.forceUpdate();
   }
 
   render() {

@@ -54,7 +54,7 @@ export default class Dashboard extends React.Component {
    */
   handle_onPost(event) {
     event.preventDefault();
-    this.setState({showForm: false})
+    this.setState({ showForm: false });
     const negocio = {
       nombre: event.target.nombre.value,
       direccion: event.target.direccion.value
@@ -68,10 +68,11 @@ export default class Dashboard extends React.Component {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "http://localhost:3000"
       }
-    })
-      .catch(err => {
-        console.log(err.message);
-      });
+    }).catch(err => {
+      console.log(err.message);
+    });
+
+    this.forceUpdate();
   }
 
   /**
@@ -86,9 +87,8 @@ export default class Dashboard extends React.Component {
         costo: 100
       });
     });
-    
+
     this.agregar_servicios(servicios, this.state.selected._id);
-      
   }
 
   /**
@@ -222,7 +222,6 @@ export default class Dashboard extends React.Component {
           handle_onPost={this.handle_onPost}
           onShowForm={this.onShowForm}
           showForm={this.state.showForm}
-
           rol={store.getState().rol}
         />
       </div>
