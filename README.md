@@ -1,14 +1,13 @@
 # Printear - Proyecto Programación Web
 
-https://printear.herokuapp.com
 
 [NodeJS](https://nodejs.org/en/) - [NPM](https://www.npmjs.com/get-npm) o [Yarn](https://yarnpkg.com/en/docs/install#mac-stable)
 
 <br/>
-
 Una vez desplegada la aplicación, se puede utilizar siendo un usuario cliente, quien puede realizar pedidos y ver el estado de éstos. O se puede utilizar siendo un administrador, quien puede agregar tiendas papeleras y puede ver los pedidos que tiene cada una de ellas.
 
 > [Video](https://youtu.be/wBJjLQFR-g8)
+> [Sitio Web](https://printear.herokuapp.com)
 
 
 
