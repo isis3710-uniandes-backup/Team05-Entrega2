@@ -6,48 +6,69 @@ import { store } from "../Store/Store";
 export default class Registration extends React.Component {
   constructor(props) {
     super(props);
+    
+    this.initialState = {
+      nombre: "",
+      nombreUsuario:"",
+      contrasenia : "",
+      email: "",
+      tipo: ""
 
-    this.state = {
-      toDashboard: false
-    };
+    }
+
+    this.option ={
+      option: "Tipo de Usuario"
+    }
+
+    this.state = this.initialState;
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  
+
+  handleChange(event){
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({[name]: value});
+    if(value === "cliente"){
+      this.option.option= "Cliente";
+    }
+    if(value === "admin"){
+      this.option.option = "Administrador";
+    }
+    
   }
 
-  handle_onPost(event) {
+  handleSubmit(event) {
     event.preventDefault();
-    const user = {
-      nombre: event.traget.nombre.value,
-      nombreUsuario: event.target.nombreUsuario.value,
-      contrasenia: event.target.contraseia.value,
-      tipo: "cliente"
+    console.log(this.state);
+    this.onFormSubmit(this.state);
+    this.setState(this.initialState)
+  }
+
+  onFormSubmit(data) {
+    const apiUrl = '/api/usuarios';
+
+    const options = {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers:{
+        "Content-Type": "application/json"
+      }
     };
 
-    fetch(store.getState().url_usuarios, {
-      method: "post",
-      body: JSON.stringify(user),
-      cors: "no-cors",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:3000"
+    fetch(apiUrl, options)
+      .then(res => res.json())
+      .then(result => {
+        console.log(result);
+      },
+      (error) => {
+        console.log(error);
       }
-    })
-      .then(response => response.json())
-      .then(data => {
-          console.log(data);
-          store.dispatch({
-            type: "CLIENTE",
-            state: store.getState()
-          });
-          store.dispatch({
-            type: "SET",
-            user: user,
-            state: store.getState()
-          });
-          this.setState((prev) => {
-            return { toDashboard: !prev.toDashboard };
-          })
-      })
-      .catch(err => console.log(err.message));
+    )
   }
+
+
 
   render() {
     if (this.state.toDashboard) {
@@ -59,7 +80,7 @@ export default class Registration extends React.Component {
         style={{ width: "100%", height: "100vh" }}
         className="uk-flex uk-flex-center uk-flex-middle"
       >
-        <form onSubmit={this.handle_onPost}>
+        <form onSubmit={this.handleSubmit}>
           <h1>Registrate</h1>
           <div className="uk-margin uk-width-1-1">
             <input
@@ -67,16 +88,31 @@ export default class Registration extends React.Component {
               type="text"
               placeholder="Nombre Completo"
               name="nombre"
+              value={this.state.nombre}
+              onChange={this.handleChange}
             />
           </div>
           <div className="uk-margin uk-width-1-1">
             <input
               className="uk-input uk-form-width-large"
               type="text"
-              placeholder="Nombre de usuario"
-              name="nombreUsuario"
+              placeholder="Correo Electronico"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
             />
           </div>
+          <div className="uk-margin uk-width-1-1">
+            <input
+              className="uk-input uk-form-width-large"
+              type="text"
+              placeholder="Nombre de Usuario"
+              name="nombreUsuario"
+              value={this.state.nombreUsuario}
+              onChange={this.handleChange}
+            />
+          </div>
+          
 
           <div className="uk-margin uk-width-1-1">
             <input
@@ -84,21 +120,35 @@ export default class Registration extends React.Component {
               type="password"
               placeholder="Contraseña"
               name="contrasenia"
+              value={this.state.contrasenia}
+              onChange={this.handleChange}
             />
+          </div>
+          <div className="uk-margin uk-width-1-1">
+            <select
+              className="uk-input uk-form-width-large"
+              name="tipo"
+              value={this.state.email}
+              onChange={this.handleChange}
+            >
+              <option value="">{this.option.option}</option>
+              <option value="cliente" selected>Cliente</option>
+              <option value="admin" >Administrador</option>    
+            </select>
           </div>
 
           <div className="uk-margin uk-flex">
-            <Link to="/dashboard">
-              <button className="uk-button uk-button-primary" type="submit">
-                Enviar
+            <button className="uk-button uk-button-primary" type="submit">
+            Enviar
               </button>
-            </Link>
+           
             <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <Link to="/">
               <button className="uk-button uk-button-secondary">
                 Cancelar
               </button>
-            </Link>
+              </Link>
+            
           </div>
         </form>
       </div>
