@@ -21,7 +21,7 @@ export default function Content(props) {
               <br />
               <button
                 className="uk-button uk-button-primary"
-                style={{ borderRadius: "1em" }}
+                style={{ borderRadius: "1em", backgroundColor: 'rgb(52, 106, 127)' }}
                 onClick={_ => props.onShowForm()}
               >
                 Hacer un pedido

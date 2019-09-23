@@ -60,12 +60,12 @@ export default class Home extends React.Component {
           >
             <h1
               className="uk-heading-primary animate uk-invisible"
-              style={{ fontWeight: "700", color: "#41748C" }}
+              style={{ fontFamily: 'Nunito', color: "#41748C", fontSize: '42px' }}
             >
-              Imprime donde quieras, Recoge cuando gustes
+              Imprime donde quieras <br/>Recoge cuando gustes
             </h1>
             <div className="uk-width-4-5@m uk-margin-auto animate uk-invisible">
-              <p className="lead" style={{ color: "#41748C" }}>
+              <p className="lead" style={{ color: "#41748C", fontFamily: 'Oxygen' }}>
                 La mejor forma de encargar tus impresiones a tu tienda preferida y 
                 recogerlas cuando quieras. ¡Evita las filas y únete ahora!
               </p>

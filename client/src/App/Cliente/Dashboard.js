@@ -48,7 +48,7 @@ export default class DashboardCliente extends React.Component {
       })
       .then(data => {
         if (data) {
-          data = data.slice(0, 6)
+          //data = data.slice(0, 6)
           this.setState({ negocios: data });
         }
       })
@@ -128,6 +128,7 @@ export default class DashboardCliente extends React.Component {
     }).catch(err => {
       console.log(err.message);
     });
+    this.forceUpdate();
   }
 
   render() {

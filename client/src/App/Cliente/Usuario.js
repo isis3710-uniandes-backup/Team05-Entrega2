@@ -71,7 +71,7 @@ function MenuUsuario(props) {
     <div className="uk-flex uk-flex-middle">
       <div>
         <NavLink to="/usuario/33">
-          <p>User Name</p>
+          <p style={{color: 'rgb(52, 106, 127)'}}>User Name</p>
         </NavLink>
       </div>
       <div>
