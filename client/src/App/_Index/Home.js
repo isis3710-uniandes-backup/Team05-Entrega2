@@ -117,12 +117,13 @@ export default class Home extends React.Component {
 
           <div className="uk-position-bottom-center uk-position-small">
             <span className="uk-text-small uk-text-center">
-              © 2019 |{" "}
+              © 2019 {" Printear "}| 
               <a
                 href="https://github.com/zzseba78/Kick-Off"
-                title="Created by KickOff"
+                title="Home Template by KickOff"
+                className="uk-text-muted"
               >
-                Created by KickOff
+                Home Template by KickOff
               </a>{" "}
               | Built with{" "}
               <a
@@ -137,7 +138,7 @@ export default class Home extends React.Component {
           </div>
         </div>
 
-        <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: false">
+        {/* <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: false">
           <div className="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
             <button
               className="uk-offcanvas-close uk-close uk-icon"
@@ -197,7 +198,7 @@ export default class Home extends React.Component {
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
