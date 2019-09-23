@@ -118,7 +118,7 @@ export default class Dashboard extends React.Component {
       })
       .then(data => {
         if (data) {
-          data = data.slice(0, 6);
+          //data = data.slice(0, 6);
           this.setState({ negocios: data });
         }
       })
