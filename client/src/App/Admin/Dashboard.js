@@ -68,10 +68,14 @@ export default class Dashboard extends React.Component {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "http://localhost:3000"
       }
-    }).catch(err => {
+    })
+    .then(_ => {
+      this.get_negocios();
+    })
+    .catch(err => {
       console.log(err.message);
     });
-
+    
     this.forceUpdate();
   }
 
